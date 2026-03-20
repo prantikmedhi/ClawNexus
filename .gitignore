@@ -1,0 +1,41 @@
+node_modules/
+dist/
+.env
+*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.tsbuildinfo
+
+# Test
+coverage/
+src/**/__tests__/
+*.test.ts
+*.test.tsx
+*.test.js
+*.test.jsx
+*.spec.ts
+*.spec.tsx
+*.spec.js
+*.spec.jsx
+
+# Logs
+*.log
+
+# Agent
+.agent/
+.agents/
+.claude/settings.local.json
+.codex/skills/openclaw-office-release/
+
+#
+ClawX/

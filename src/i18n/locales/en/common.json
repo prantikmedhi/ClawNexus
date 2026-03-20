@@ -1,0 +1,113 @@
+{
+  "status": {
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "reconnecting": "Reconnecting",
+    "disconnected": "Disconnected",
+    "error": "Connection Error",
+    "active": "Active",
+    "paused": "Paused",
+    "ok": "OK",
+    "failed": "Failed",
+    "running": "Running",
+    "pending": "Pending",
+    "disabled": "Disabled"
+  },
+  "actions": {
+    "send": "Send",
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "stop": "Stop",
+    "retry": "Retry",
+    "save": "Save",
+    "delete": "Delete",
+    "refresh": "Refresh",
+    "create": "Create",
+    "edit": "Edit"
+  },
+  "time": {
+    "justNow": "just now",
+    "secondsAgo": "{{count}}s ago",
+    "minutesAgo": "{{count}}m ago",
+    "hoursAgo": "{{count}}h ago",
+    "running": "running {{seconds}}s",
+    "runningMinutes": "running {{minutes}}m {{seconds}}s"
+  },
+  "empty": {
+    "noData": "No data",
+    "noCostData": "No cost data yet",
+    "noActivityData": "No activity data yet",
+    "noRelationData": "No agent relation data yet",
+    "noEvents": "No events yet",
+    "noMatchingAgents": "No matching agents",
+    "noSubAgents": "No sub-agents",
+    "waitingUsageData": "No data, waiting for usage data..."
+  },
+  "agent": {
+    "statusLabels": {
+      "idle": "Idle",
+      "thinking": "Thinking",
+      "tool_calling": "Tool Call",
+      "speaking": "Speaking",
+      "spawning": "Spawning",
+      "error": "Error",
+      "offline": "Offline"
+    }
+  },
+  "zones": {
+    "desk": "Desk Zone",
+    "meeting": "Meeting Zone",
+    "hotDesk": "Hot Desk Zone",
+    "lounge": "Lounge Zone"
+  },
+  "errors": {
+    "notConnected": "Not connected to Gateway",
+    "operationFailed": "Operation failed",
+    "operationTimeout": "Operation timed out, Gateway may not support this action",
+    "adapterNotInitialized": "Gateway Adapter not initialized",
+    "unknownError": "Unknown error",
+    "errorOccurred": "An error occurred"
+  },
+  "events": {
+    "startRunning": "Started running",
+    "thinking": "Thinking",
+    "runEnded": "Run ended",
+    "fallback": "Fallback",
+    "toolCall": "Tool call: {{name}}",
+    "toolDone": "Tool done: {{name}}",
+    "errorPrefix": "Error: {{message}}",
+    "unknownStream": "unknown stream: {{stream}}",
+    "lifecycleUnknown": "lifecycle: {{phase}}"
+  },
+  "connectionSetup": {
+    "eyebrow": "Connection Setup",
+    "title": "Choose the ClawNexus connection mode",
+    "description": "On first launch, choose which Gateway the local Node proxy should forward to. The browser still connects only through /gateway-ws.",
+    "syncing": "Applying connection settings and preparing the proxy...",
+    "footer": "Local mode resets to the Office Server default Gateway. Remote mode accepts a full access link and can auto-extract the token.",
+    "actions": {
+      "continue": "Continue",
+      "connecting": "Applying..."
+    },
+    "local": {
+      "title": "Local Gateway",
+      "description": "Use the Strategic Nexus default local Gateway and keep the original startup behavior."
+    },
+    "remote": {
+      "title": "Remote Gateway",
+      "description": "Forward through the local Node proxy to a remote Gateway, including Aliyun-hosted services.",
+      "gatewayUrlLabel": "Gateway Access URL",
+      "gatewayUrlHint": "You can paste a full access link such as http(s)://host/path?token=...",
+      "gatewayUrlPlaceholder": "http://*.*.*.*/gateway?token=***",
+      "gatewayTokenLabel": "Gateway Token",
+      "gatewayTokenHint": "If the URL does not include a token, enter it here.",
+      "gatewayTokenExtracted": "Token detected from the access link. You can still override it manually.",
+      "gatewayTokenPlaceholder": "Enter the remote Gateway token"
+    },
+    "validation": {
+      "gatewayUrlRequired": "Enter the remote Gateway access URL.",
+      "gatewayTokenRequired": "Enter the remote Gateway token."
+    }
+  }
+}

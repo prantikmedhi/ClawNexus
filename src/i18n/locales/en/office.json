@@ -1,0 +1,14 @@
+{
+  "zones": {
+    "desk": "Desk Zone",
+    "meeting": "Meeting Zone",
+    "hotDesk": "Hot Desk Zone",
+    "lounge": "Lounge Zone"
+  },
+  "customization": {
+    "title": "Workspace Customization",
+    "floorColor": "Floor Color",
+    "showBeams": "Collaboration Beams",
+    "bloom": "Neon Bloom"
+  }
+}

@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 801528c96f63a056968b8dc6f43ec10b62d9a75e Prantik <prantikmedhi@example.com> 1773984687 +0530	clone: from https://github.com/WW-AI-Lab/openclaw-office.git
+801528c96f63a056968b8dc6f43ec10b62d9a75e 6b4b72b86c1ee61358062773ef5fcb7c5ab7e91a Prantik <prantikmedhi@example.com> 1773987185 +0530	commit: chore: migrate to openclaw-workspace and clean up Chinese text
+6b4b72b86c1ee61358062773ef5fcb7c5ab7e91a 3629c8baccef78d7f74d980a9d0ac71c901691c4 Prantik <prantikmedhi@example.com> 1773987348 +0530	commit: chore: remove contributor section and update copyright
+3629c8baccef78d7f74d980a9d0ac71c901691c4 4f34ad4d392531b386a35a4a9fe6f9d6c74e3516 Prantik <prantikmedhi@example.com> 1773987414 +0530	commit: docs: update quick launch instructions to local-first
+4f34ad4d392531b386a35a4a9fe6f9d6c74e3516 90a3a0e06c0f437e9e82aa8883d93489cd438ed1 Prantik <prantikmedhi@example.com> 1774002779 +0530	commit: feat: transform UI with orange gradient aesthetic
+90a3a0e06c0f437e9e82aa8883d93489cd438ed1 da67da3d33286d5881124d038ac6af9889708be7 Prantik <prantikmedhi@example.com> 1774012970 +0530	commit: ui: finalize orange gradient aesthetic — eliminate gray boundaries in office-2d
+da67da3d33286d5881124d038ac6af9889708be7 61e442269024324a60e60d44a75cab7549137fd2 Prantik <prantikmedhi@example.com> 1774013607 +0530	commit: fix: improve lounge zone visibility in dark mode
