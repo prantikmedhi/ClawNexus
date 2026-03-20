@@ -1,0 +1,38 @@
+# Development
+src/
+tests/
+.env*
+.git*
+.github/
+
+# Build tools
+vite.config.ts
+vitest.config.ts
+tsconfig.json
+tsconfig.*.json
+tailwind.config.ts
+postcss.config.js
+
+# Dev dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Docs
+CLAUDE.md
+CONTRIBUTING.md
+document.md
+
+# Media (except used in production)
+assets/
+*.mov
+*.mp4
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

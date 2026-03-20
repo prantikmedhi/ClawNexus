@@ -1,5 +1,5 @@
 {
-  "name": "openclaw-office",
+  "name": "clawnexus",
   "version": "2026.3.8",
   "description": "Professional visual monitoring and management frontend for OpenClaw Multi-Agent system",
   "keywords": [
@@ -7,10 +7,11 @@
     "dashboard",
     "monitoring",
     "multi-agent",
-    "clawnexus",
+    "openclaw",
     "react",
     "visualization",
-    "vite"
+    "vite",
+    "office"
   ],
   "homepage": "https://github.com/prantikmedhi/openclaw-office",
   "bugs": {
@@ -26,7 +27,7 @@
     "url": "git+https://github.com/prantikmedhi/openclaw-office.git"
   },
   "bin": {
-    "clawnexus-office": "bin/openclaw-office.js"
+    "clawnexus": "bin/openclaw-office.js"
   },
   "files": [
     "dist/",
