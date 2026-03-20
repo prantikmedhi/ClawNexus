@@ -57,10 +57,7 @@ Seamless bottom-docked communication panel for direct agent interaction:
 
 ### Demo Video
 
-<video width="100%" controls style="border-radius: 8px; margin: 20px 0;">
-  <source src="./assets/ClawNexus.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+[![ClawNexus Office Demo](https://img.youtube.com/vi/4Vq2vqMlC6Y/0.jpg)](https://www.youtube.com/watch?v=4Vq2vqMlC6Y)
 
 **Watch the ClawNexus Office in action** — Real-time agent visualization, live collaboration tracking, and instant system control.
 
