@@ -209,7 +209,7 @@ export function App() {
         <Route element={<AppShell wsClient={wsClient} isMobile={isMobile} />}>
           <Route path="/" element={<OfficeView />} />
         </Route>
-        <Route element={<ConsoleLayout />}>
+        <Route element={<ConsoleLayout isMobile={isMobile} />}>
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/agents" element={<AgentsPage />} />
           <Route path="/channels" element={<ChannelsPage />} />

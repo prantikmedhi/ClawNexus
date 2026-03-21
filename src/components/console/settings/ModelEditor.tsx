@@ -88,7 +88,7 @@ function ModelForm({ model, onChange, onRemove, defaultCollapsed = false }: Mode
       {!collapsed && (
         <div className="space-y-4 border-t border-gray-200 px-4 py-4 dark:border-gray-600">
           {/* Row 1: id + name */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label={t("settings.providers.models.id")}>
               <input
                 type="text"
@@ -110,7 +110,7 @@ function ModelForm({ model, onChange, onRemove, defaultCollapsed = false }: Mode
           </div>
 
           {/* Row 2: reasoning toggle + input types */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label={t("settings.providers.models.reasoning")}>
               <ToggleButton
                 active={model.reasoning === true}
@@ -141,7 +141,7 @@ function ModelForm({ model, onChange, onRemove, defaultCollapsed = false }: Mode
           </div>
 
           {/* Row 3: API override + contextWindow + maxTokens */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Field label={t("settings.providers.models.apiOverride")}>
               <div className="relative">
                 <select
@@ -193,7 +193,7 @@ function ModelForm({ model, onChange, onRemove, defaultCollapsed = false }: Mode
             <p className="mb-2 text-xs text-gray-500 dark:text-gray-400">
               {t("settings.providers.models.costHint")}
             </p>
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {(["input", "output", "cacheRead", "cacheWrite"] as const).map((field) => (
                 <div key={field}>
                   <label className="mb-1 block text-xs text-gray-500 dark:text-gray-400">
@@ -228,7 +228,7 @@ function ModelForm({ model, onChange, onRemove, defaultCollapsed = false }: Mode
 
             {showAdvanced && (
               <div className="mt-3 space-y-3 rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-600 dark:bg-gray-800">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Field label={t("settings.providers.models.thinkingFormat")}>
                     <div className="relative">
                       <select
@@ -279,7 +279,7 @@ function ModelForm({ model, onChange, onRemove, defaultCollapsed = false }: Mode
                   </Field>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
                   {(
                     [
                       "supportsStore",

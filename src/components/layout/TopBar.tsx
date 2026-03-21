@@ -150,7 +150,7 @@ function ConnectionIndicator({
           animation: statusCfg.pulse ? "pulse 1.5s ease-in-out infinite" : "none",
         }}
       />
-      <span className="text-sm text-gray-500 dark:text-gray-400">
+      <span className="max-w-[120px] truncate text-sm text-gray-500 dark:text-gray-400">
         {connectionError && connectionStatus === "error" ? connectionError : statusCfg.label}
       </span>
     </div>

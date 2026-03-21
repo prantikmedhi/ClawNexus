@@ -71,6 +71,16 @@ export function ChatTimelineDrawer({ height, onHeightChange }: ChatTimelineDrawe
     [height],
   );
 
+  const handleTouchStart = useCallback(
+    (e: React.TouchEvent) => {
+      e.preventDefault();
+      setIsDragging(true);
+      dragStartY.current = e.touches[0].clientY;
+      dragStartHeight.current = height;
+    },
+    [height],
+  );
+
   useEffect(() => {
     if (!isDragging) return;
 
@@ -83,15 +93,32 @@ export function ChatTimelineDrawer({ height, onHeightChange }: ChatTimelineDrawe
       onHeightChange(newHeight);
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+      const delta = dragStartY.current - e.touches[0].clientY;
+      const newHeight = Math.max(
+        150,
+        Math.min(window.innerHeight * 0.4, dragStartHeight.current + delta),
+      );
+      onHeightChange(newHeight);
+    };
+
     const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    const handleTouchEnd = () => {
       setIsDragging(false);
     };
 
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("touchmove", handleTouchMove);
+    document.addEventListener("touchend", handleTouchEnd);
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
     };
   }, [isDragging, onHeightChange]);
 
@@ -111,6 +138,7 @@ export function ChatTimelineDrawer({ height, onHeightChange }: ChatTimelineDrawe
       <div
         className="flex h-3 cursor-ns-resize items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800"
         onMouseDown={handleDragStart}
+        onTouchStart={handleTouchStart}
       >
         <div className="h-0.5 w-8 rounded-full bg-gray-300 dark:bg-gray-600" />
       </div>

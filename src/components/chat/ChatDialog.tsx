@@ -138,11 +138,28 @@ export function ChatDialog() {
     [height],
   );
 
+  const handleTouchStart = useCallback(
+    (e: React.TouchEvent) => {
+      e.preventDefault();
+      setIsDragging(true);
+      dragStartY.current = e.touches[0].clientY;
+      dragStartHeight.current = height;
+    },
+    [height],
+  );
+
   useEffect(() => {
     if (!isDragging) return;
 
     const handleMouseMove = (e: MouseEvent) => {
       const delta = dragStartY.current - e.clientY;
+      const maxHeight = window.innerHeight * MAX_HEIGHT_RATIO;
+      const newHeight = Math.max(MIN_HEIGHT, Math.min(maxHeight, dragStartHeight.current + delta));
+      setHeight(newHeight);
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      const delta = dragStartY.current - e.touches[0].clientY;
       const maxHeight = window.innerHeight * MAX_HEIGHT_RATIO;
       const newHeight = Math.max(MIN_HEIGHT, Math.min(maxHeight, dragStartHeight.current + delta));
       setHeight(newHeight);
@@ -157,11 +174,24 @@ export function ChatDialog() {
       }
     };
 
+    const handleTouchEnd = () => {
+      setIsDragging(false);
+      try {
+        localStorage.setItem(HEIGHT_STORAGE_KEY, String(height));
+      } catch {
+        // silent
+      }
+    };
+
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("touchmove", handleTouchMove);
+    document.addEventListener("touchend", handleTouchEnd);
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
     };
   }, [isDragging, height]);
 
@@ -213,6 +243,7 @@ export function ChatDialog() {
       <div
         className="flex h-3 shrink-0 cursor-ns-resize items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800"
         onMouseDown={handleDragStart}
+        onTouchStart={handleTouchStart}
       >
         <div className="h-0.5 w-8 rounded-full bg-gray-300 dark:bg-gray-600" />
       </div>

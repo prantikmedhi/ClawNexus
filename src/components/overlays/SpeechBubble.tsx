@@ -67,7 +67,7 @@ export function SpeechBubbleOverlay({ agent }: SpeechBubbleOverlayProps) {
       }}
     >
       <div
-        className="pointer-events-auto min-w-[320px] w-[min(54vw,520px)] max-w-[min(94vw,560px)] max-h-[40vh] overflow-y-auto rounded-2xl border border-slate-300/80 bg-white px-4 py-3.5 text-[14px] leading-7 text-slate-900 shadow-2xl [overflow-wrap:anywhere] dark:border-slate-600/90 dark:bg-slate-900 dark:text-slate-100"
+        className="pointer-events-auto min-w-[min(320px,85vw)] w-[min(54vw,520px)] max-w-[min(94vw,560px)] max-h-[40vh] overflow-y-auto rounded-2xl border border-slate-300/80 bg-white px-4 py-3.5 text-[14px] leading-7 text-slate-900 shadow-2xl [overflow-wrap:anywhere] dark:border-slate-600/90 dark:bg-slate-900 dark:text-slate-100"
         data-testid="speech-bubble-overlay"
       >
         <div className="mb-2 flex items-start justify-end">
@@ -78,7 +78,7 @@ export function SpeechBubbleOverlay({ agent }: SpeechBubbleOverlayProps) {
               setVisible(false);
             }}
             aria-label={t("actions.close")}
-            className="rounded-md px-1.5 py-0.5 text-sm leading-none text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-100"
+            className="rounded-md p-2 text-sm leading-none text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-100 min-w-[32px] min-h-[32px] flex items-center justify-center"
           >
             ×
           </button>
